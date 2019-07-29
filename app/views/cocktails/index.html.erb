@@ -1,0 +1,15 @@
+<div class="banner">
+  <h1 class="welcome">Welcome to Mister Cocktails</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+        <% @cocktails.each do |cocktail| %>
+        <div class="card col-3">
+          <span><h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5> </span>
+        </div>
+      <% end %>
+    </div>
+</div>
+
+

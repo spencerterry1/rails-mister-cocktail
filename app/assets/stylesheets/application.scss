@@ -1,0 +1,16 @@
+@import "components/_card";
+@import "components/_home";
+@import "components/_button";
+
+
+@import "bootstrap/scss/bootstrap";
+@import "cocktails";
+@import "doses";
+@import "ingredients";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  background-color:  #AEE5D8;
+}

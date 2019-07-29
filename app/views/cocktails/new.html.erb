@@ -1,0 +1,15 @@
+<div class="banner">
+  <h1>Add a cocktail</h1>
+</div>
+
+<div class="cocktail-card">
+  <%= form_for(@cocktail) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+</div>
+
+
+<%= render "shared/background" %>
