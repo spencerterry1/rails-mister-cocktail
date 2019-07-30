@@ -3,6 +3,10 @@
     <h1 class="welcome"><%= @cocktail.name %></h1>
   </div>
 
+<div class="cocktail-image-card">
+  <%= cl_image_tag @cocktail.photo, width: 300, height: 300 %>
+</div>
+
 <div class="cocktail-card">
   <% @cocktail.doses.each do |dose| %>
   <div class="cocktail-mini-card">
@@ -19,10 +23,14 @@
     <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
     </button>
 </div>
+
 <div class="cocktail-card">
-  <p>
-    <h5><%= link_to "Home", cocktails_path %></h5>
-   </p>
+  <h5><%= link_to "Home", cocktails_path %></h5>
+</div>
+
+<div class="cocktail-card">
+  <h5><%= link_to "Delete", cocktail_path, method: :delete %></h5>
 </div>
 
 </div>
+

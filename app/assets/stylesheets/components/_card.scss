@@ -1,12 +1,19 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .card {
-  width: 100px;
+  width: 200px;
   height: 200px;
   margin: 5px;
   display: flex;
   background-image: asset-url('cocktail-pic.jpg');
   background-size: cover;
   position: relative;
-  flex-grow: 1;
 }
 
 .card span {
@@ -21,9 +28,10 @@
   color: white;
 }
 
-.row {
+.row{
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .card-title {
@@ -31,8 +39,8 @@
 }
 
 .cocktail-card {
-  line-height: 70px;
-  height: 70px;
+  line-height: 40px;
+  height: 40px;
   text-align: center;
   margin-top: 20px;
 }
@@ -56,4 +64,14 @@
   width: 500px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.cocktail-image-card {
+  height: 300px;
+  margin: 0 auto;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
