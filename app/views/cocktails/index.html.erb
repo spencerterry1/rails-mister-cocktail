@@ -1,20 +1,15 @@
 <div class="banner">
   <h1 class="welcome">Welcome to Mister Cocktails</h1>
-  <h4><%= link_to "Add cocktail", new_cocktail_path %></h4>
+  <h5 id="add-cocktail"><%= link_to "Add cocktail", new_cocktail_path %></h5>
 </div>
 
 <div class="cards-container">
     <% @cocktails.each do |cocktail| %>
       <div class="card">
-        <span><h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5> </span>
+        <%= cl_image_tag cocktail.photo, width: 200, height: 300, crop: :scale, vignette:30 %>
+        <span><h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)%></h5> </span>
       </div>
     <% end %>
 </div>
 
 
-<div class="cards-container">
-  <!-- display flex justify-content center -->
-  <div class="cards">
-    <!-- put your css grid here -->
-  </div>
-</div>
